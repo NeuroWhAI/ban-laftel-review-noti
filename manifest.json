@@ -9,7 +9,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://laftel.net/notifications"],
+      "matches": ["*://laftel.net/*"],
       "js": ["content-script.js"]
     }
   ],
