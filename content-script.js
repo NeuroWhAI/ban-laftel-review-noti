@@ -5,13 +5,13 @@ chrome.runtime.onMessage.addListener((req, sender, sendRes) => {
 });
 
 function ban(retryCnt) {
-    let box = document.querySelector(".notification-list");
-    if (box) {
-        let notiList = box.querySelectorAll(".notification-item");
+    let title = document.querySelector(".title");
+    if (title && title.parentElement) {
+        let notiList = title.parentElement.querySelectorAll(".info");
         for (let noti of notiList) {
             let ment = noti.querySelector(".ment");
             if (ment && ment.innerHTML.indexOf("작성한 리뷰를 좋아해요") >= 0) {
-                noti.remove();
+                noti.parentElement?.remove();
             }
         }
     } else if (retryCnt < 42) {
