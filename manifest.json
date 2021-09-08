@@ -1,7 +1,7 @@
 {
   "name": "ban-laftel-review-noti",
   "description": "라프텔의 알림 화면에서 리뷰를 좋아하는 사람이 있다는 내용 삭제.",
-  "version": "1.1",
+  "version": "1.2",
   "manifest_version": 3,
   "permissions": ["tabs"],
   "background": {
