@@ -14,6 +14,9 @@ function ban(retryCnt) {
                 noti.parentElement?.remove();
             }
         }
+        if (retryCnt < 10 && notiList.length <= 0) {
+            setTimeout(() => ban(retryCnt + 1), 200);
+        }
     } else if (retryCnt < 42) {
         setTimeout(() => ban(retryCnt + 1), 200);
     }
