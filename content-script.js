@@ -10,7 +10,7 @@ function ban(retryCnt) {
         let notiList = title.parentElement.querySelectorAll(".info");
         for (let noti of notiList) {
             let ment = noti.querySelector(".ment");
-            if (ment && ment.innerHTML.indexOf("작성한 리뷰를 좋아해요") >= 0) {
+            if (ment && ment.innerHTML.indexOf(" 리뷰를 좋아해요") >= 0) {
                 noti.parentElement?.remove();
             }
         }
